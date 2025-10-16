@@ -1,4 +1,0 @@
-npx npm run format
-npx npm run eslint
-npx npm run test
-git add -A .
