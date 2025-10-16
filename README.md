@@ -6,8 +6,8 @@ An Express + EJS application that ingests raw NYC Taxi Trip CSV data, cleans and
 
 ## Quick Links
 
-- Technical report (PDF) placeholder: `[Insert technical report PDF link here]`
-- Video walkthrough placeholder: `[Insert video link here]`
+- Technical report (PDF) placeholder: [Technical Report](https://drive.google.com/file/d/1C46ec83KWI5eN61aGNYIWSdchE38bwMb/view?usp=sharing)
+- Video walkthrough placeholder: [Demo Video](https://www.loom.com/share/3ff12dd703f24fbaa945b2ee19356733?sid=1321d784-03c6-4d9c-86d6-a06679ffdb9e)
 
 ## Team
 
@@ -203,8 +203,8 @@ Jest tests live in `src/test`.
 
 - Codebase with clear structure (this repo)
 - Database schema/migrations (`supabase/migrations`)
-- Technical report (PDF) placeholder: `[Insert technical report PDF link here]`
-- Video walkthrough placeholder: `[Insert video link here]`
+- Technical report (PDF) placeholder: [Technical Report](https://drive.google.com/file/d/1C46ec83KWI5eN61aGNYIWSdchE38bwMb/view?usp=sharing)
+- Video walkthrough placeholder: [Demo Video](https://www.loom.com/share/3ff12dd703f24fbaa945b2ee19356733?sid=1321d784-03c6-4d9c-86d6-a06679ffdb9e)
 
 ## Troubleshooting
 
