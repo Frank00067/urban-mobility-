@@ -1,0 +1,68 @@
+{
+  "name": "urbanmobility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "npm-run-all gulp webpack",
+    "start": "node dist/index.js",
+    "start:gulp": "npm-run-all gulp webpack start",
+    "eslint": "eslint .",
+    "webpack": "webpack",
+    "gulp": "gulp",
+    "format": "prettier --write . --ignore-unknown",
+    "prepare": "husky",
+    "dev": "nodemon --watch src -e ts,ejs --exec npm run start:gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kagaba-etienne/urbanmobility.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kagaba-etienne/urbanmobility/issues"
+  },
+  "homepage": "https://github.com/kagaba-etienne/urbanmobility#readme",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/dotenv": "^6.1.1",
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.3",
+    "@types/express-ejs-layouts": "^2.5.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.7.2",
+    "@types/supertest": "^6.0.3",
+    "del": "^8.0.1",
+    "eslint": "^9.37.0",
+    "gulp": "^5.0.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.5",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "winston": "^3.18.3",
+    "zod": "^4.1.12"
+  }
+}
