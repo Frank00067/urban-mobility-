@@ -34,4 +34,8 @@ router.post(
   ingressController.ingest,
 );
 
+<<<<<<< HEAD
 export default router;
+=======
+export default router;
+>>>>>>> 142719504754837855f7b0bef6dc9069d465a5df

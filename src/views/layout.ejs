@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Node Typescript</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.2/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css" />
   </head>
-  <body>
-    <div><%- body %></div>
+  <body style="margin:0;font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'">
+    <div class="topbar"><div class="topbar-inner">Urban Mobility Dashboard</div></div>
+    <div class="container"><%- body %></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.2/mapbox-gl.js"></script>
   </body>
 </html>

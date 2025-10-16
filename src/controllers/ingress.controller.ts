@@ -46,6 +46,15 @@ const ingest = async (req: Request, res: Response) => {
 
     const file = parsedFile.data;
 
+<<<<<<< HEAD
+=======
+    logger.info("Received file upload", {
+      filename: file.originalname,
+      size: file.size,
+      mimetype: file.mimetype,
+    });
+
+>>>>>>> 142719504754837855f7b0bef6dc9069d465a5df
     const { data, error } = await ingressService.ingest(file);
 
     if (error) {
@@ -78,4 +87,8 @@ const ingest = async (req: Request, res: Response) => {
   }
 };
 
+<<<<<<< HEAD
 export default { ingest };
+=======
+export default { ingest };
+>>>>>>> 142719504754837855f7b0bef6dc9069d465a5df

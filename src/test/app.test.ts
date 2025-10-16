@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "./app";
+import app from "../app";
 
 describe("App", () => {
   it("GET /health should return status 200 and expected JSON", async () => {
@@ -10,10 +10,5 @@ describe("App", () => {
     expect(res.body).toHaveProperty("uptime");
     expect(res.body).toHaveProperty("environment");
     expect(res.body).toHaveProperty("version");
-  });
-
-  it("GET /hello-world should respond", async () => {
-    const res = await request(app).get("/hello-world");
-    expect(res.status).toBe(200);
   });
 });

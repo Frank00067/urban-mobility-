@@ -3,10 +3,11 @@ import express from "express";
 import logger from "./utils/logger";
 import cookieParser from "cookie-parser";
 import loggingMiddleware from "./middlewares/logger.middleware";
-import helloWorldRoute from "./routes/helloWorld.route";
 import cors from "cors";
 import expressEjsLayouts from "express-ejs-layouts";
 import path from "node:path";
+import ingressRoute from "./routes/ingress.route";
+import tripsRoute from "./routes/trips.route";
 
 const app = express();
 
@@ -43,10 +44,19 @@ app.get("/health", (req, res) => {
 });
 
 // Render home page
-app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
+app.get("/", (_, res) => {
+  res.render("index", {
+    title: "Dashboard",
+    mapboxToken: process.env.MAPBOX_TOKEN || "",
+  });
 });
 
-// Hello World endpoint
-app.use("/hello-world", helloWorldRoute);
+app.use("/api/v1/ingress", ingressRoute);
+app.use("/api/v1/trips", tripsRoute);
+
+// 404 handler
+app.use((_, res) => {
+  res.status(404).render("404", { title: "404 - Not Found" });
+});
+
 export default app;
