@@ -121,7 +121,7 @@ const readRowsFromCSV = async (
 const upsertVendors = async (vendorIds: Set<number>) => {
   const vendors = Array.from(vendorIds).map((id) => ({
     id,
-    name: `Vendor ${id}`,
+    name: Vendor ${id},
   }));
   const { error } = await supabase
     .from("vendors")
@@ -198,4 +198,4 @@ export const ingest = async (fileData: FileData) => {
   }
 };
 
-export default { ingest };
+export default { ingest };
