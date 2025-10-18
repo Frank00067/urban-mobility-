@@ -32,3 +32,14 @@ const ingest = async (req: Request, res: Response) => {
         message: "No file uploaded",
       });
     }
+
+    // Validate the uploaded file using Zod
+    const parsedFile = MulterFileSchema.safeParse(req.file);
+    if (!parsedFile.success) {
+      logger.warn("Invalid file upload", { errors: parsedFile.error.issues });
+      return res.status(400).json({
+        success: false,
+        message: "Invalid file upload",
+        errors: parsedFile.error.issues,
+      });
+    }
