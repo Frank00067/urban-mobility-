@@ -22,3 +22,13 @@ const MulterFileSchema = z.object({
     .max(200 * 1024 * 1024, "Max size is 200MB"),
   buffer: z.instanceof(Buffer), // the actual file data
 });
+
+const ingest = async (req: Request, res: Response) => {
+  try {
+    if (!req.file) {
+      logger.warn("No file uploaded");
+      return res.status(400).json({
+        success: false,
+        message: "No file uploaded",
+      });
+    }
