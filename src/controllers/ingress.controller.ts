@@ -65,3 +65,30 @@ const ingest = async (req: Request, res: Response) => {
         error,
       });
     }
+
+    logger.info("File uploaded successfully", {
+      filename: file.originalname,
+      size: file.size,
+      mimetype: file.mimetype,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "File uploaded and validated successfully",
+      data,
+    });
+  } catch (error) {
+    logger.error("Error processing file upload", { error });
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error",
+      error,
+    });
+  }
+};
+
+<<<<<<< HEAD
+export default { ingest };
+=======
+export default { ingest };
+>>>>>>> 142719504754837855f7b0bef6dc9069d465a5df
