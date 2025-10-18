@@ -57,3 +57,11 @@ const ingest = async (req: Request, res: Response) => {
 >>>>>>> 142719504754837855f7b0bef6dc9069d465a5df
     const { data, error } = await ingressService.ingest(file);
 
+    if (error) {
+      logger.error("Error ingesting data:", error);
+      return res.status(500).json({
+        success: false,
+        message: "Error ingesting data",
+        error,
+      });
+    }
